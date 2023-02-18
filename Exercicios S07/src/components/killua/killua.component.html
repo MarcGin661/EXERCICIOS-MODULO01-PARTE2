@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <h3> {{title}}</h3>
+
+    <div *ngIf="fotos.length > 0">
+      <img [src]="fotos[fotoAtual]" style="margin: 2rem; width:30%;">
+
+      <div>
+      Foto {{fotoAtual + 1}} de {{fotos.length}}
+      <button (click)="primeiraFoto()">Primeira</button>
+      <button (click)="fotoAnterior()">Anterior</button>
+      <button (click)="proximaFoto()">Proxima</button>
+      <button (click)="ultimaFoto(fotos.length)">Ultima</button>
+    </div>
+    </div>
+
+</div>
